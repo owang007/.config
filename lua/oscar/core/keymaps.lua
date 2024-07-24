@@ -1,10 +1,10 @@
-vim.g.mapleader = ' '
+vim.g.mapleader = " "
 
 -- Navigate vim panes better
-vim.keymap.set('n', '<c-k>', ':windcmd k<CR>')
-vim.keymap.set('n', '<c-j>', ':windcmd j<CR>')
-vim.keymap.set('n', '<c-h>', ':windcmd h<CR>')
-vim.keymap.set('n', '<c-l>', ':windcmd l<CR>')
+vim.keymap.set("n", "<c-k>", ":windcmd k<CR>")
+vim.keymap.set("n", "<c-j>", ":windcmd j<CR>")
+vim.keymap.set("n", "<c-h>", ":windcmd h<CR>")
+vim.keymap.set("n", "<c-l>", ":windcmd l<CR>")
 
 -- Window management
 vim.keymap.set("n", "<leader>sv", "<C-w>v") -- Split window vertically
