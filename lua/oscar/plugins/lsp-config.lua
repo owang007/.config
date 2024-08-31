@@ -3,7 +3,9 @@ return {
 	branch = "v3.x",
 	dependencies = {
 		{ "neovim/nvim-lspconfig" },
+    { "nvimtools/none-ls.nvim" },
 		{ "williamboman/mason.nvim" },
+    { "williamboman/mason-null-ls.nvim" },
 		{ "williamboman/mason-lspconfig.nvim" },
 		{ "hrsh7th/cmp-nvim-lsp" },
 		{ "hrsh7th/nvim-cmp" },
@@ -70,6 +72,16 @@ return {
 					require("luasnip").lsp_expand(args.body)
 				end,
 			},
+    })
+
+    require("null-ls").setup({
+      sources = {}
+    })
+
+    require("mason-null-ls").setup({
+      ensure_installed = nil,
+      automatic_installation = true,
+      handlers = {}
 		})
 	end,
 }
