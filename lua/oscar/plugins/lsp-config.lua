@@ -22,6 +22,17 @@ return {
 		-- This should be executed before you configure any language server
 		local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
 
+		vim.diagnostic.config({
+			signs = {
+				text = {
+					[vim.diagnostic.severity.ERROR] = "✘",
+					[vim.diagnostic.severity.WARN] = "▲",
+					[vim.diagnostic.severity.HINT] = "⚑",
+					[vim.diagnostic.severity.INFO] = "»",
+				},
+			},
+		})
+
 		vim.api.nvim_create_autocmd("LspAttach", {
 			desc = "LSP actions",
 			callback = function(event)
